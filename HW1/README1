@@ -1,0 +1,23 @@
+# Contact Management System
+
+A comprehensive contact management system implemented in Python using dictionary operations.
+
+## Features
+
+- **Contact Management**: Create, read, update, and delete contacts
+- **Search Functionality**: Search contacts by name, category, or phone number
+- **Data Analysis**: Generate statistics about your contacts
+- **Duplicate Detection**: Find potential duplicate contacts
+- **Contact Merging**: Merge two contacts with conflict resolution
+- **Category Export**: Export contacts by category to a formatted string or file
+- **Data Persistence**: Save and load contacts from text files
+
+## How to Run
+
+1. Ensure you have Python 3.6+ installed
+2. Download all the files:
+   - `contact_manager.py` (main program)
+   - `test_contact_manager.py` (test cases)
+   - `README.md` (this documentation)
+
+3. Run the main program:
