@@ -1,0 +1,15 @@
+** This contains only grades and comments for Part II of Mid Term**
+
+Grading Rubrics:
+    Problem 1:
+    - add_student:                  5 out of 5 points
+    - get_class_average:            10 out of 10 points
+    - get_passing_students:         10 out of 10 bonus points
+
+    Problem 5:
+    - find_all_phones:              5 out of 5 points
+    - find_all_prices:              5 out of 5 points
+    - extract_emails:               5 out of 5 points
+    - validate_student_id:          5 out of 5 points
+
+Total Points: 45 out of 35
