@@ -1,29 +1,20 @@
-# homework2_lastname_firstname.py
-# CS1350 Week 2 Homework: NumPy Array Operations
-
 import numpy as np
 import time
 
-# Set random seed for reproducible results
 np.random.seed(1350)  # Use course number as seed
 
 def problem1():
     """
     Complete the following tasks:
     """
-    # a) Create a 1D array of integers from 10 to 50 (inclusive) with step 5
     arr1 = np.arange(10, 51, 5)
     
-    # b) Create a 2D array of shape (3, 4) filled with zeros
     arr2 = np.zeros((3, 4))
     
-    # c) Create a 3x3 identity matrix
     identity = np.eye(3)
     
-    # d) Create an array of 10 evenly spaced numbers between 0 and 5
     linspace_arr = np.linspace(0, 5, 10)
     
-    # e) Create a random array of shape (2, 5) with values between 0 and 1
     random_arr = np.random.rand(2, 5)
     
     return arr1, arr2, identity, linspace_arr, random_arr
@@ -38,19 +29,14 @@ def problem2():
                       [7, 8, 9]])
     arr_b = np.array([10, 20, 30])
     
-    # a) Add arr_b to each row of arr_a (using broadcasting)
     result_add = arr_a + arr_b
     
-    # b) Multiply each column of arr_a by the corresponding element in arr_b
     result_multiply = arr_a * arr_b
     
-    # c) Calculate the square of all elements in arr_a
     result_square = arr_a ** 2
     
-    # d) Calculate the mean of each column in arr_a
     column_means = np.mean(arr_a, axis=0)
     
-    # e) Subtract the column means from each element in the respective column
     centered_arr = arr_a - column_means
     
     return result_add, result_multiply, result_square, column_means, centered_arr
@@ -62,19 +48,14 @@ def problem3():
     # Create a 5x5 array with values from 1 to 25
     arr = np.arange(1, 26).reshape(5, 5)
     
-    # a) Extract the third row (index 2)
     third_row = arr[2, :]
     
-    # b) Extract the last column (index -1)
     last_column = arr[:, -1]
     
-    # c) Extract the 2x2 subarray from the center (rows 1-2, columns 1-2)
     center_subarray = arr[1:3, 1:3]
     
-    # d) Extract all elements greater than 15
     greater_than_15 = arr[arr > 15]
     
-    # e) Replace all even numbers with -1 (create a copy first)
     arr_copy = arr.copy()
     arr_copy[arr_copy % 2 == 0] = -1
     
@@ -84,26 +65,20 @@ def problem4():
     """
     Perform statistical analysis on student scores.
     """
-    # Student test scores (rows: students, columns: tests)
     scores = np.array([[85, 90, 78, 92],
                        [79, 85, 88, 91],
                        [92, 88, 95, 89],
                        [75, 72, 80, 78],
                        [88, 91, 87, 94]])
     
-    # a) Calculate the average score for each student (across all tests)
     student_averages = np.mean(scores, axis=1)
     
-    # b) Calculate the average score for each test (across all students)
     test_averages = np.mean(scores, axis=0)
     
-    # c) Find the highest score for each student
     student_max_scores = np.max(scores, axis=1)
     
-    # d) Find the standard deviation of scores for each test
     test_std = np.std(scores, axis=0)
     
-    # e) Identify which students have an average score above 85
     high_performers = student_averages > 85
     
     return student_averages, test_averages, student_max_scores, test_std, high_performers
@@ -119,7 +94,6 @@ def problem5():
     python_list = list(range(size))
     numpy_array = np.arange(size)
     
-    # Task: Square all elements
     
     # Python list approach
     start_time = time.time()
@@ -217,7 +191,6 @@ if __name__ == "__main__":
     print(f"NumPy time: {p6_results['numpy_time']:.6f} seconds")
     print(p6_results['conclusion'])
     
-    # Uncomment if attempting bonus
     print("\nBonus Challenge Results:")
     bonus_results = bonus_challenge()
     print(f"Normalized range: [{bonus_results[0].min():.2f}, {bonus_results[0].max():.2f}]")
